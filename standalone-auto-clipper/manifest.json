@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian Research Auto Clipper",
+  "version": "0.1.0",
+  "description": "Auto-save research-like pages into Obsidian after dwell-time heuristics.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "alarms",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Obsidian Research Auto Clipper"
+  },
+  "commands": {
+    "save-current-page": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Force-capture the current page now"
+    }
+  }
+}
